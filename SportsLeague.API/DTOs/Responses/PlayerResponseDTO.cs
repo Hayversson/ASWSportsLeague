@@ -1,18 +1,17 @@
 ﻿using SportsLeague.Domain.Enums;
 
-namespace SportsLeague.Domain.Entities;
+namespace SportsLeague.API.DTOs.Response;
 
-public class Player : AuditBase
+public class PlayerResponseDTO
 {
+    public int Id { get; set; }
     public string FirstName { get; set; } = string.Empty;
     public string LastName { get; set; } = string.Empty;
     public DateTime BirthDate { get; set; }
     public int Number { get; set; }
     public PlayerPosition Position { get; set; }
-
-    // Foreign Key
     public int TeamId { get; set; }
-
-    // Navigation Property
-    public Team Team { get; set; } = null!;
+    public string TeamName { get; set; } = string.Empty;
+    public DateTime CreatedAt { get; set; }
+    public DateTime? UpdatedAt { get; set; }
 }

@@ -17,12 +17,13 @@ public class GenericRepository<T> : IGenericRepository<T> where T : AuditBase
     public async Task<IEnumerable<T>> GetAllAsync()
     {
         return await _dbSet.ToListAsync();
-
     }
+
     public async Task<T?> GetByIdAsync(int id)
     {
         return await _dbSet.FindAsync(id);
     }
+
     public async Task<T> CreateAsync(T entity)
     {
         entity.CreatedAt = DateTime.UtcNow;
@@ -31,12 +32,14 @@ public class GenericRepository<T> : IGenericRepository<T> where T : AuditBase
         await _context.SaveChangesAsync(); //Save changes is needed to reflex and save dates to de DB
         return entity;
     }
+
     public async Task UpdateAsync(T entity)
     {
         entity.UpdatedAt = DateTime.UtcNow;
         _dbSet.Update(entity);
         await _context.SaveChangesAsync();
     }
+
     public async Task DeleteAsync(int id)
     {
         var entity = await GetByIdAsync(id);
