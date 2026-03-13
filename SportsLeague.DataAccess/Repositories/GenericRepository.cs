@@ -5,7 +5,7 @@ using SportsLeague.Domain.Interfaces.Repositories;
 
 namespace SportsLeague.DataAccess.Repositories;
 
-internal class GenericRepository<T> : IGenericRepository<T> where T : AuditBase
+public class GenericRepository<T> : IGenericRepository<T> where T : AuditBase
 {
     protected readonly LeagueDbContext _context;
     protected readonly DbSet<T> _dbSet;

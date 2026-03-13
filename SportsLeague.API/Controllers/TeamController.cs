@@ -9,7 +9,7 @@ namespace SportsLeague.API.Controllers;
 
 [ApiController] //DataAnnotations para validar el modelo, si el modelo no es válido, devuelve automáticamente un 400 Bad Request con los errores de validación
 [Route("api/[controller]")]
-internal class TeamController : ControllerBase
+public class TeamController : ControllerBase
 {
     private readonly ITeamService _teamService;
     private readonly IMapper _mapper;

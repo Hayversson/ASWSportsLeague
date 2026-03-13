@@ -5,7 +5,7 @@ using SportsLeague.Domain.Interfaces.Services;
 
 namespace SportsLeague.Domain.Services;
 
-internal class TeamService : ITeamService
+public class TeamService : ITeamService
 {
     private readonly ITeamRepository _teamRepository;
     private readonly ILogger<TeamService> _logger;

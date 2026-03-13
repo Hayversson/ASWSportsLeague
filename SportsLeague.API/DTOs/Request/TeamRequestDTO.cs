@@ -1,6 +1,6 @@
 ﻿namespace SportsLeague.API.DTOs.Request;
 
-internal class TeamRequestDTO
+public class TeamRequestDTO
 {
     public string Name { get; set; } = string.Empty;
     public string City { get; set; } = string.Empty;
