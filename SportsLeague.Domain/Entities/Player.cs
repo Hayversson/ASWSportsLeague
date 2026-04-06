@@ -14,5 +14,5 @@ public class Player : AuditBase
     public int TeamId { get; set; }
 
     // Navigation Property
-    public Team Team { get; set; } = null!;
+    public Team Team { get; set; } = null!; //player has the line because is the 1 of 1*M
 }

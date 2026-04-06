@@ -2,8 +2,8 @@
 
 public class TournamentTeam : AuditBase
 {
-    public int TournamentId { get; set; }
-    public int TeamId { get; set; }
+    public int TournamentId { get; set; } //Foreign Key
+    public int TeamId { get; set; } //Foreign Key
     public DateTime RegisteredAt { get; set; } = DateTime.UtcNow;
 
     // Navigation Properties

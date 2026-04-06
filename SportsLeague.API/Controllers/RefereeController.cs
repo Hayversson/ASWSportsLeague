@@ -13,7 +13,6 @@ public class RefereeController : ControllerBase
 {
     private readonly IRefereeService _refereeService;
     private readonly IMapper _mapper;
-    private readonly ILogger<RefereeController> _logger;
 
     public RefereeController(
         IRefereeService refereeService,
@@ -22,7 +21,6 @@ public class RefereeController : ControllerBase
     {
         _refereeService = refereeService;
         _mapper = mapper;
-        _logger = logger;
     }
 
     [HttpGet]

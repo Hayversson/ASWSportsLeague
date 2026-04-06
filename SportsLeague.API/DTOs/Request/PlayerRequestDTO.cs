@@ -9,5 +9,5 @@ public class PlayerRequestDTO
     public DateTime BirthDate { get; set; }
     public int Number { get; set; }
     public PlayerPosition Position { get; set; }
-    public int TeamId { get; set; }
+    public int TeamId { get; set; } 
 }
