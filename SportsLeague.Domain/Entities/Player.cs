@@ -15,4 +15,8 @@ public class Player : AuditBase
 
     // Navigation Property
     public Team Team { get; set; } = null!; //player has the line because is the 1 of 1*M
+
+    public ICollection<Goal> Goals { get; set; } = new List<Goal>();
+    public ICollection<Card> Cards { get; set; } = new List<Card>();
+
 }
